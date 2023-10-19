@@ -1,0 +1,12 @@
+﻿Yüklenecek Paketler
+
+install-package microsoft.entityframeworkcore.sqlserver -v 7.0.12
+install-package microsoft.entityframeworkcore.tools -v 7.0.12
+
+Yüklendikten sonra database'e rehberlik etmek için migration oluşturmamız gerekiyor.
+
+Migration oluşturma komutu
+add-migration InitialCreate
+
+Migration oluşturduktan sonra bu migration'a göre database oluşturma işlemi aşağıdaki kodu çalıştırırız.
+update-database
